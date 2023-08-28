@@ -40,6 +40,16 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        // API 服务
+        'admins' => [
+            'driver' => 'passport',
+            'provider' => 'admins',
+    ],
+        'users' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+        ],
     ],
 
     /*
@@ -60,9 +70,14 @@ return [
     */
 
     'providers' => [
+        
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Qingwuit\Models\Admin::class,
+        ],
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Qingwuit\Models\User::class,
         ],
 
         // 'users' => [
