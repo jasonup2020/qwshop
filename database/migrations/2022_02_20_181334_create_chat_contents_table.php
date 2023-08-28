@@ -21,7 +21,7 @@ class CreateChatContentsTable extends Migration
             $table->string('stype',20)->default('Anonymous')->comment('发送者类型'); // #Anonymous 匿名 #User 用户表 #Admin 管理员表
             $table->string('rtype',20)->default('Anonymous')->comment('接收者类型'); // #Anonymous 匿名 #User 用户表 #Admin 管理员表
             $table->string('content_type',20)->default('text')->comment('内容类型'); // #Text | Image
-            $table->text('content')->default('')->comment('详情');
+            $table->text('content')->comment('详情');
             $table->unsignedTinyInteger('s_read')->default(1)->comment('发送者查看');
             $table->unsignedTinyInteger('r_read')->default(0)->comment('接收者查看');
             $table->timestamps();

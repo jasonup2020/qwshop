@@ -27,8 +27,8 @@ class CreateIntegralGoodsTable extends Migration
             $table->unsignedInteger('goods_sale')->default(0)->comment('销售量');
             $table->unsignedTinyInteger('goods_status')->default(0)->comment('上下架');
             $table->unsignedTinyInteger('is_recommend')->default(0)->comment('推荐');
-            $table->text('goods_content')->default('')->comment('详情');
-            $table->text('goods_content_mobile')->default('')->comment('手机端详情');
+            $table->text('goods_content')->comment('详情');
+            $table->text('goods_content_mobile')->comment('手机端详情');
             $table->timestamps();
             $table->softDeletes();
         });
